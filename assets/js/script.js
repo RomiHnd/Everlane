@@ -85,3 +85,45 @@ colorToggleBtn.addEventListener("click", () => {
   hiddenColors.forEach((item) => item.classList.toggle("hidden"));
   colorToggleBtn.textContent = isColorExpanded ? "View Less -" : "View More +";
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const addCartBtn = document.querySelector(".addCartBtn");
+  const cartSidebar = document.querySelector(".cart-sidebar");
+  const closeBtn = document.querySelector(".close-btn");
+
+  if (addCartBtn && cartSidebar && closeBtn) {
+    // باز کردن سایدبار
+    addCartBtn.addEventListener("click", function () {
+      cartSidebar.classList.add("open");
+      // وقتی باز شد، رویداد کلیک بیرون رو فعال کنیم
+      document.addEventListener("click", outsideClickListener);
+      document.addEventListener("keydown", escapeKeyListener);
+    });
+
+    // بستن سایدبار با کلیک روی دکمه بسته شدن
+    closeBtn.addEventListener("click", function () {
+      closeSidebar();
+    });
+
+    // بستن سایدبار وقتی روی بیرون از سایدبار کلیک شود
+    function outsideClickListener(event) {
+      if (!cartSidebar.contains(event.target) && !addCartBtn.contains(event.target)) {
+        closeSidebar();
+      }
+    }
+
+    // بستن سایدبار با دکمه Escape
+    function escapeKeyListener(event) {
+      if (event.key === "Escape") {
+        closeSidebar();
+      }
+    }
+
+    function closeSidebar() {
+      cartSidebar.classList.remove("open");
+      document.removeEventListener("click", outsideClickListener);
+      document.removeEventListener("keydown", escapeKeyListener);
+    }
+  }
+});
