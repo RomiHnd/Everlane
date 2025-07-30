@@ -61,3 +61,27 @@ window.addEventListener("load", () => {
       track.style.transform = `translateX(-${scrollAmount}px)`;
     }
   });})
+
+
+const toggleBtn = document.querySelector(".category-toggleBtn");
+const hiddenItems = document.querySelectorAll(".category-list .hidden");
+let isExpanded = false;
+
+toggleBtn.addEventListener("click", () => {
+  isExpanded = !isExpanded;
+  hiddenItems.forEach(item => {
+    item.classList.toggle("hidden");
+  });
+  toggleBtn.textContent = isExpanded ? "View Less -" : "View More +";
+});
+
+
+const colorToggleBtn = document.querySelector(".color-toggleBtn");
+const hiddenColors = document.querySelectorAll(".color-circle.extra");
+let isColorExpanded = false;
+
+colorToggleBtn.addEventListener("click", () => {
+  isColorExpanded = !isColorExpanded;
+  hiddenColors.forEach((item) => item.classList.toggle("hidden"));
+  colorToggleBtn.textContent = isColorExpanded ? "View Less -" : "View More +";
+});

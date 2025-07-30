@@ -129,7 +129,7 @@ body, html {
   transition: background-color 0.3s, transform 0.3s ease;
 }
 .hero .overlay .btn:hover {
-  background-color: #db8c0a;
+  background-color: rgb(219.0434782609, 140.3869565217, 9.9565217391);
   transform: scale(1.1);
 }
 
@@ -406,7 +406,7 @@ body, html {
   transition: background-color 0.3s, transform 0.3s ease;
 }
 .footer .footer-columns .footer-col.newsletter button:hover {
-  background-color: #db8c0a;
+  background-color: rgb(219.0434782609, 140.3869565217, 9.9565217391);
   transform: scale(1.1);
 }
 .footer .footer-bottom {
@@ -750,4 +750,41 @@ body, html {
 .shopNowBtn:hover {
   background-color: orange;
   transition: 0.5s;
+}
+
+.product-page {
+  width: 100vw;
+  padding: 50px;
+}
+.product-page .product-sidebar {
+  width: 20%;
+  background-color: #f5a623;
+  padding: 10px;
+}
+.product-page .product-sidebar .category-filter {
+  width: 250px;
+  font-family: sans-serif;
+}
+.product-page .product-sidebar .category-filter h3 {
+  font-size: 20px;
+  padding: 5px 0px;
+}
+.product-page .product-sidebar .category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.product-page .product-sidebar .category-list li {
+  margin-bottom: 8px;
+}
+.product-page .product-sidebar .hidden {
+  display: none;
+}
+.product-page .product-sidebar #toggleBtn {
+  background: none;
+  border: none;
+  color: #007aff;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */
