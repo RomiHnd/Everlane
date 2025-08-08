@@ -2216,13 +2216,20 @@ body, html {
     font-size: 12px;
   }
   .image-container .image-text {
+    margin: 20px;
     font-size: 12px;
-    padding: 0px 0px;
+    width: 300px;
     border-radius: 8px;
     text-align: center;
   }
   .image-container .image-text .top-text {
-    font-size: 20px;
+    font-size: 15px;
+  }
+  .image-container .image-text .middle-text {
+    font-size: 13px;
+  }
+  .image-container .image-text .bottom-text {
+    font-size: 13px;
   }
   .text-container {
     text-align: center;
@@ -2281,6 +2288,6 @@ body, html {
     grid-template-columns: 1fr;
   }
   .image-gallery a.link {
-    font-size: 25px;
+    font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

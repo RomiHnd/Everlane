@@ -2534,12 +2534,19 @@ padding: 15px 25px;
 
 .image-container {
     .image-text {
+      margin: 20px;
     font-size: 12px;
-    padding: 0px 0px;
+    width: 300px;
     border-radius: 8px;
     text-align: center;
       .top-text{
-        font-size: 20px;
+        font-size: 15px;
+      }
+      .middle-text{
+        font-size: 13px;
+      }
+      .bottom-text{
+        font-size: 13px;
       }
 }
 }
@@ -2594,7 +2601,7 @@ padding: 15px 25px;
         grid-template-columns: 1fr;
     }
     a.link{
-        font-size: 25px;
+        font-size: 15px;
     }
 }
 }
