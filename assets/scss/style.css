@@ -2216,8 +2216,9 @@ body, html {
     font-size: 12px;
   }
   .image-container .image-text {
-    margin: 20px;
+    margin: auto;
     font-size: 12px;
+    width: 60%;
     border-radius: 8px;
     text-align: center;
   }
