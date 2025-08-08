@@ -2205,7 +2205,6 @@ body, html {
   .image-container .image-text {
     margin: 20px;
     font-size: 12px;
-    width: 300px;
     border-radius: 8px;
     text-align: center;
   }
