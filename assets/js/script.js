@@ -135,23 +135,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileSidebar = document.getElementById("mobileSidebar");
+  const closeBtn = document.querySelector(".close-btn");
 
- const toggleBtn = document.querySelector('.menu-toggle');
-  const closeBtn = document.querySelector('.close-btn');
-  const sidebar = document.querySelector('.mobile-sidebar');
-  const overlay = document.querySelector('.overlay');
-
-  toggleBtn.addEventListener('click', () => {
-    sidebar.classList.add('active');
-    overlay.classList.add('active');
+  menuToggle.addEventListener("click", function () {
+    mobileSidebar.classList.add("active");
   });
 
-  closeBtn.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    overlay.classList.remove('active');
+  closeBtn.addEventListener("click", function () {
+    mobileSidebar.classList.remove("active");
   });
-
-  overlay.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    overlay.classList.remove('active');
-  });
+});
