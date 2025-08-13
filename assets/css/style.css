@@ -1187,9 +1187,10 @@ body, html {
     font-size: 20px;
   }
   .product-page .product-main .product-gallery .product-card .product-info .product-title {
-    font-size: 20px;
+    font-size: 13px;
     margin: 5px 0;
     text-decoration: none;
+    color: #111;
   }
   .product-page .product-main .product-gallery .product-card .product-info .product-color {
     font-size: 14px;
