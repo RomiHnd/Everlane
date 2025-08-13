@@ -148,3 +148,39 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileSidebar.classList.remove("active");
   });
 });
+
+//sidebar view more and less
+document.querySelectorAll('.category-toggleBtn, .color-toggleBtn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const parent = btn.parentElement;
+        
+    
+        const hiddenItems = parent.querySelectorAll('.hidden, .extra.hidden');
+        
+
+        hiddenItems.forEach(el => {
+            el.classList.toggle('hidden');
+        });
+
+
+        if (btn.textContent.includes('More')) {
+            btn.textContent = btn.textContent.replace('More +', 'Less −');
+        } else {
+            btn.textContent = btn.textContent.replace('Less −', 'More +');
+        }
+    });
+});
+
+
+//mobile filter menu
+const filterBtn = document.querySelector('.filter-btn');
+const mobilePanel = document.querySelector('.mobile-filter-panel');
+const closeBtn = mobilePanel.querySelector('.close-btn');
+
+filterBtn.addEventListener('click', () => {
+    mobilePanel.style.display = 'block';
+});
+closeBtn.addEventListener('click', () => {
+    mobilePanel.style.display = 'none';
+});
+
