@@ -2252,6 +2252,105 @@ body, html {
     font-weight: 500;
     font-size: 20px;
   }
+  .product-container {
+    width: 100%;
+    flex-direction: column;
+    padding: 50px;
+    margin: auto;
+  }
+  .product-container .product-info {
+    width: 100%;
+    padding: 5px;
+    line-height: 30px;
+  }
+  .product-container .product-info h3 {
+    font-size: 22px;
+  }
+  .product-container .product-info .size-options {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .product-container .product-info .size-box {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+  }
+  .recomended-products {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+  .recomended-products h3 {
+    font-size: 23px;
+    margin: 10px;
+  }
+  .recomended-products .items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: row;
+  }
+  .recomended-products .items-container img {
+    width: 210px;
+  }
+  .recomended-products .items-container .info {
+    gap: 15px;
+  }
+  .recomended-products .items-container .info p {
+    font-size: 15px;
+  }
+  .recomended-products .items-container .info .price {
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+  }
+  .review-summary {
+    gap: 20px;
+    padding: 10px;
+    width: 80%;
+  }
+  .review-summary .rating-distribution .row span:first-child {
+    font-size: 12px;
+  }
+  .review-summary .rating-distribution .row span:last-child {
+    font-size: 12px;
+  }
+  .review-section {
+    width: 80%;
+    padding: 20px;
+  }
+  .pricing-section {
+    padding: 20px 10px;
+  }
+  .pricing-section p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 15px;
+  }
+  .pricing-section .pricing-items {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .pricing-section .pricing-items .item {
+    text-align: center;
+    font-size: 11px;
+  }
+  .pricing-section .pricing-items .item img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+  .pricing-section .pricing-items .item strong {
+    display: block;
+    margin-top: 5px;
+  }
 }
 @media (max-width: 480px) {
   nav.header,
@@ -2577,6 +2676,171 @@ body, html {
   .article-container .article .text {
     font-size: 15px;
     line-height: 33px;
+  }
+  .product-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    justify-content: center;
+    margin: auto;
+  }
+  .product-container .product-info {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+  }
+  .product-container .product-info h4 {
+    font-size: 12px;
+  }
+  .product-container .product-info h3 {
+    font-size: 18px;
+  }
+  .product-container .product-info .size-options {
+    gap: 8px;
+  }
+  .product-container .product-info .size-box {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+  .product-container .product-info .icon-box {
+    gap: 10px;
+    margin: 20px 0px;
+  }
+  .product-container .product-info .icon-box .item {
+    gap: 10px;
+  }
+  .product-container .product-info .icon-box .item img {
+    width: 30px;
+    height: 30px;
+  }
+  .product-container .product-info .icon-box .item .text h3 {
+    font-size: 14px;
+  }
+  .product-container .photoGallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+  }
+  .product-container .photoGallery img {
+    width: 95%;
+  }
+  .product-container .photoGallery img:hover {
+    transform: scale(1.3);
+  }
+  .recomended-products {
+    width: 100%;
+    padding: 40px;
+  }
+  .recomended-products h3 {
+    font-size: 20px;
+    margin: 20px;
+    font-weight: bold;
+  }
+  .recomended-products .items-container .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .recomended-products .items-container .info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .recomended-products .items-container .info .price {
+    font-size: 17px;
+  }
+  .review-summary {
+    gap: 12px;
+    padding: 10px;
+    width: 85%;
+  }
+  .review-summary .overall-rating strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  .review-summary .overall-rating .stars {
+    font-size: 20px;
+  }
+  .review-summary .rating-distribution .row {
+    gap: 8px;
+    margin: 3px 0;
+  }
+  .review-summary .rating-distribution .row span:first-child {
+    width: 30px;
+    font-size: 12px;
+  }
+  .review-summary .rating-distribution .row .bar {
+    flex-grow: 1;
+    height: 6px;
+  }
+  .review-summary .rating-distribution .row span:last-child {
+    font-size: 12px;
+  }
+  .review-summary .fit-feedback strong {
+    font-size: 12px;
+  }
+  .review-summary .fit-feedback .fit-bar {
+    gap: 4px;
+  }
+  .review-summary .fit-feedback .fit-bar .fit-segment {
+    height: 6px;
+  }
+  .review-summary .fit-feedback .fit-labels {
+    font-size: 12px;
+  }
+  .review-section {
+    width: 85%;
+    padding: 10px;
+  }
+  .review-section .review-header {
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+  .review-section .review-header .filter-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  .review-section .review-header .sort-box {
+    gap: 10px;
+  }
+  .review-section .review-header .sort-box select {
+    font-size: 12px;
+  }
+  .review-section .review-card .user-info {
+    flex: 1;
+    min-width: 180px;
+    font-size: 15px;
+  }
+  .review-section .review-card .user-info .verified {
+    font-size: 12px;
+    color: #0b9a1c;
+    margin-left: 5px;
+  }
+  .review-section .review-card .review-content h4 {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  .review-section .review-card .review-content p {
+    font-size: 12px;
+  }
+  .pricing-section p {
+    margin: 0 auto 30px;
+    font-size: 14px;
+  }
+  .pricing-section .pricing-items {
+    gap: 10px;
+  }
+  .pricing-section .pricing-items .item {
+    font-size: 14px;
+  }
+  .pricing-section .pricing-items .item img {
+    width: 40px;
+    height: 40px;
   }
 }
 
