@@ -175,12 +175,48 @@ document.querySelectorAll('.category-toggleBtn, .color-toggleBtn').forEach(btn =
 //mobile filter menu
 const filterBtn = document.querySelector('.filter-btn');
 const mobilePanel = document.querySelector('.mobile-filter-panel');
-const closeBtn = mobilePanel.querySelector('.close-btn');
+const closeMobileMenuBtn = mobileSidebar.querySelector(".close-btn");
 
 filterBtn.addEventListener('click', () => {
     mobilePanel.style.display = 'block';
 });
-closeBtn.addEventListener('click', () => {
+closeMobileMenuBtn.addEventListener('click', () => {
     mobilePanel.style.display = 'none';
 });
+
+
+//add cart
+ const addCartBtn = document.querySelector(".addCartBtn");
+  const cartSidebar = document.querySelector(".cart-sidebar");
+  const closeBtn = cartSidebar.querySelector(".close-btn");
+
+  if (addCartBtn && cartSidebar && closeBtn) {
+    addCartBtn.addEventListener("click", function () {
+      cartSidebar.classList.add("open");
+      document.addEventListener("click", outsideClickListener);
+      document.addEventListener("keydown", escapeKeyListener);
+    });
+
+    closeBtn.addEventListener("click", function () {
+      closeSidebar();
+    });
+
+    function outsideClickListener(event) {
+      if (!cartSidebar.contains(event.target) && !addCartBtn.contains(event.target)) {
+        closeSidebar();
+      }
+    }
+
+    function escapeKeyListener(event) {
+      if (event.key === "Escape") {
+        closeSidebar();
+      }
+    }
+
+    function closeSidebar() {
+      cartSidebar.classList.remove("open");
+      document.removeEventListener("click", outsideClickListener);
+      document.removeEventListener("keydown", escapeKeyListener);
+    }
+  }
 
